@@ -1,0 +1,46 @@
+{
+    "name": "Telegram Glitch Bot",
+    "description": "Telegram Fotolarını Glitch efekti veren bot",
+    "logo": "https://www.hizliresim.com/fqv9d58",
+    "keywords": [
+        "telegram",
+        "foto",
+        "glitch",
+        "shop",
+        "edit"
+    ],
+    "repository": "https://github.com/egiusta/telegram-glitch-bot",
+    "success_url": "istediğiniz bir link",
+    "image": "heroku/python",
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "env": {
+        "API_HASH": {
+            "description": "my.telegram.org sitesinden alın",
+            "value": "",
+            "required": true
+        },
+        "API_ID": {
+            "description": "my.telegram.org sitesinden alın.",
+            "value": "",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "Bu değişkeni @Botfather alın.",
+            "value": "",
+            "required": true
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+        },
+        {
+            "url": "heroku/python"
+        }
+    ]
+}
